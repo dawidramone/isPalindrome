@@ -46,7 +46,7 @@ class PalindromeViewController: UIViewController {
         return label
     }()
 
-    private let palindromeViewModel = PalindromeViewModel()
+    private let viewModel = PalindromeViewModel()
 
     override func viewDidLoad() {
         self.view.backgroundColor = .white
@@ -59,12 +59,12 @@ class PalindromeViewController: UIViewController {
         checkButton.rx.tap
             .asDriver()
             .withLatestFrom(palindromeTextFiled.rx.text.asDriver())
-            .map { self.palindromeViewModel.isPalindrome(input: $0) }
+            .map { self.viewModel.isPalindrome(input: $0) }
             .drive(onNext: { (isPalindrome) in
                 self.answerLabel.text = isPalindrome
                 ? "Jest Palidromem!"
                 : "Nie jest Palidromem!"
-    
+
                 self.palindromeTextFiled.text = ""
             })
             .disposed(by: disposeBag)
