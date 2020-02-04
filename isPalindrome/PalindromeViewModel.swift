@@ -10,8 +10,6 @@ import Foundation
 
 class PalindromeViewModel: ViewModelForViewController {
 
-    init() {}
-
     func isPalindrome(input: String?) -> Bool {
         guard let input = input else { return false }
         let lowercase = input.lowercased()

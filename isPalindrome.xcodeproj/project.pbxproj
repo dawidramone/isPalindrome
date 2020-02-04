@@ -16,6 +16,7 @@
 		9253856423E9F2BE00493DF1 /* PalindromeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253856323E9F2BE00493DF1 /* PalindromeViewModel.swift */; };
 		9253856C23EA022E00493DF1 /* isPalindromeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253856B23EA022E00493DF1 /* isPalindromeTests.swift */; };
 		9253857423EA06C100493DF1 /* ViewModelForViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253857323EA06C100493DF1 /* ViewModelForViewController.swift */; };
+		9253857623EA0E0D00493DF1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253857523EA0E0D00493DF1 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		9253856B23EA022E00493DF1 /* isPalindromeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isPalindromeTests.swift; sourceTree = "<group>"; };
 		9253856D23EA022E00493DF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9253857323EA06C100493DF1 /* ViewModelForViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelForViewController.swift; sourceTree = "<group>"; };
+		9253857523EA0E0D00493DF1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				9253854D23E9E4FF00493DF1 /* AppDelegate.swift */,
 				9253854F23E9E4FF00493DF1 /* SceneDelegate.swift */,
 				9253856123E9E6F300493DF1 /* PalindromeViewController.swift */,
+				9253857523EA0E0D00493DF1 /* Constants.swift */,
 				9253856323E9F2BE00493DF1 /* PalindromeViewModel.swift */,
 				9253857323EA06C100493DF1 /* ViewModelForViewController.swift */,
 				9253855623E9E50400493DF1 /* Assets.xcassets */,
@@ -275,6 +278,7 @@
 				9253857423EA06C100493DF1 /* ViewModelForViewController.swift in Sources */,
 				9253856223E9E6F300493DF1 /* PalindromeViewController.swift in Sources */,
 				9253856423E9F2BE00493DF1 /* PalindromeViewModel.swift in Sources */,
+				9253857623EA0E0D00493DF1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
