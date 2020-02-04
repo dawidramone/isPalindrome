@@ -84,10 +84,5 @@ class PalindromeViewController: UIViewController {
         answerLabel.autoPinEdge(toSuperviewEdge: .left, withInset: 16, relation: .greaterThanOrEqual)
         answerLabel.autoPinEdge(toSuperviewEdge: .right, withInset: 16, relation: .greaterThanOrEqual)
         answerLabel.autoPinEdge(toSuperviewEdge: .bottom, withInset: 16, relation: .greaterThanOrEqual)
-
-
-
-
-
     }
 }
