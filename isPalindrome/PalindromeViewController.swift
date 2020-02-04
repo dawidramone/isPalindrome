@@ -27,10 +27,12 @@ class PalindromeViewController: UIViewController {
         return label
     }()
 
-    private let palindromeTextFiled: UITextField = {
-        let txtFiled = UITextField()
-        txtFiled.borderStyle = .roundedRect
-        return txtFiled
+    private let palindromeTextField: UITextField = {
+        let textField = UITextField()
+        textField.borderStyle = .roundedRect
+        textField.clearButtonMode = .always
+        textField.clearButtonMode = .whileEditing
+        return textField
     }()
 
     private let checkButton: UIButton = {
@@ -58,23 +60,20 @@ class PalindromeViewController: UIViewController {
     private func bind() {
         checkButton.rx.tap
             .asDriver()
-            .withLatestFrom(palindromeTextFiled.rx.text.asDriver())
+            .withLatestFrom(palindromeTextField.rx.text.asDriver())
             .map { self.viewModel.isPalindrome(input: $0) }
             .drive(onNext: { (isPalindrome) in
                 self.answerLabel.text = isPalindrome
                 ? "Jest Palidromem!"
                 : "Nie jest Palidromem!"
-
-                self.palindromeTextFiled.text = ""
             })
             .disposed(by: disposeBag)
-
     }
 
     private func addSubviews() {
         self.view.addSubview(titleLabel)
         self.view.addSubview(insertTextLabel)
-        self.view.addSubview(palindromeTextFiled)
+        self.view.addSubview(palindromeTextField)
         self.view.addSubview(checkButton)
         self.view.addSubview(answerLabel)
     }
@@ -90,11 +89,11 @@ class PalindromeViewController: UIViewController {
         insertTextLabel.autoPinEdge(toSuperviewEdge: .left, withInset: 16, relation: .equal)
         insertTextLabel.autoPinEdge(toSuperviewEdge: .right, withInset: 16, relation: .greaterThanOrEqual)
 
-        palindromeTextFiled.autoPinEdge(.top, to: .bottom, of: insertTextLabel)
-        palindromeTextFiled.autoPinEdge(toSuperviewEdge: .left, withInset: 16, relation: .equal)
-        palindromeTextFiled.autoPinEdge(toSuperviewEdge: .right, withInset: 16, relation: .equal)
+        palindromeTextField.autoPinEdge(.top, to: .bottom, of: insertTextLabel)
+        palindromeTextField.autoPinEdge(toSuperviewEdge: .left, withInset: 16, relation: .equal)
+        palindromeTextField.autoPinEdge(toSuperviewEdge: .right, withInset: 16, relation: .equal)
 
-        checkButton.autoPinEdge(.top, to: .bottom, of: palindromeTextFiled, withOffset: 8)
+        checkButton.autoPinEdge(.top, to: .bottom, of: palindromeTextField, withOffset: 8)
         checkButton.autoAlignAxis(toSuperviewAxis: .vertical)
         checkButton.autoPinEdge(toSuperviewEdge: .left, withInset: 16, relation: .greaterThanOrEqual)
         checkButton.autoPinEdge(toSuperviewEdge: .left, withInset: 16, relation: .greaterThanOrEqual)
