@@ -11,8 +11,9 @@ import PureLayout
 import RxSwift
 import RxCocoa
 
-class PalindromeViewController: UIViewController {
+class PalindromeViewController: UIViewController, UITextFieldDelegate {
     private let disposeBag = DisposeBag()
+
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Czy jest palindromem"
@@ -52,6 +53,7 @@ class PalindromeViewController: UIViewController {
 
     override func viewDidLoad() {
         self.view.backgroundColor = .white
+        palindromeTextField.delegate = self
         addSubviews()
         createConstraints()
         bind()
@@ -66,6 +68,13 @@ class PalindromeViewController: UIViewController {
                 self.answerLabel.text = isPalindrome
                 ? "Jest Palidromem!"
                 : "Nie jest Palidromem!"
+            })
+            .disposed(by: disposeBag)
+
+        palindromeTextField.rx.controlEvent(.allTouchEvents)
+            .asObservable()
+            .subscribe(onNext: {
+                self.answerLabel.text = ""
             })
             .disposed(by: disposeBag)
     }
