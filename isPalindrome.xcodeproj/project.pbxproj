@@ -14,7 +14,19 @@
 		9253855A23E9E50400493DF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9253855823E9E50400493DF1 /* LaunchScreen.storyboard */; };
 		9253856223E9E6F300493DF1 /* PalindromeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253856123E9E6F300493DF1 /* PalindromeViewController.swift */; };
 		9253856423E9F2BE00493DF1 /* PalindromeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253856323E9F2BE00493DF1 /* PalindromeViewModel.swift */; };
+		9253856C23EA022E00493DF1 /* isPalindromeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253856B23EA022E00493DF1 /* isPalindromeTests.swift */; };
+		9253857423EA06C100493DF1 /* ViewModelForViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253857323EA06C100493DF1 /* ViewModelForViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9253856E23EA022E00493DF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9253854223E9E4FF00493DF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9253854923E9E4FF00493DF1;
+			remoteInfo = isPalindrome;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		23E4D0C8B97721DE8954B867 /* Pods-isPalindrome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-isPalindrome.debug.xcconfig"; path = "Target Support Files/Pods-isPalindrome/Pods-isPalindrome.debug.xcconfig"; sourceTree = "<group>"; };
@@ -28,6 +40,10 @@
 		9253855B23E9E50400493DF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9253856123E9E6F300493DF1 /* PalindromeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromeViewController.swift; sourceTree = "<group>"; };
 		9253856323E9F2BE00493DF1 /* PalindromeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalindromeViewModel.swift; sourceTree = "<group>"; };
+		9253856923EA022E00493DF1 /* isPalindromeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = isPalindromeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9253856B23EA022E00493DF1 /* isPalindromeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = isPalindromeTests.swift; sourceTree = "<group>"; };
+		9253856D23EA022E00493DF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9253857323EA06C100493DF1 /* ViewModelForViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelForViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +52,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B805E91E3558FE2D10F03E9 /* Pods_isPalindrome.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9253856623EA022E00493DF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				9253854C23E9E4FF00493DF1 /* isPalindrome */,
+				9253856A23EA022E00493DF1 /* isPalindromeTests */,
 				9253854B23E9E4FF00493DF1 /* Products */,
 				F07CC5D09926F1E17028B5C9 /* Pods */,
 				58CA290F3156FE9244AE12FC /* Frameworks */,
@@ -64,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				9253854A23E9E4FF00493DF1 /* isPalindrome.app */,
+				9253856923EA022E00493DF1 /* isPalindromeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,11 +100,21 @@
 				9253854F23E9E4FF00493DF1 /* SceneDelegate.swift */,
 				9253856123E9E6F300493DF1 /* PalindromeViewController.swift */,
 				9253856323E9F2BE00493DF1 /* PalindromeViewModel.swift */,
+				9253857323EA06C100493DF1 /* ViewModelForViewController.swift */,
 				9253855623E9E50400493DF1 /* Assets.xcassets */,
 				9253855823E9E50400493DF1 /* LaunchScreen.storyboard */,
 				9253855B23E9E50400493DF1 /* Info.plist */,
 			);
 			path = isPalindrome;
+			sourceTree = "<group>";
+		};
+		9253856A23EA022E00493DF1 /* isPalindromeTests */ = {
+			isa = PBXGroup;
+			children = (
+				9253856B23EA022E00493DF1 /* isPalindromeTests.swift */,
+				9253856D23EA022E00493DF1 /* Info.plist */,
+			);
+			path = isPalindromeTests;
 			sourceTree = "<group>";
 		};
 		F07CC5D09926F1E17028B5C9 /* Pods */ = {
@@ -113,6 +148,24 @@
 			productReference = 9253854A23E9E4FF00493DF1 /* isPalindrome.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9253856823EA022E00493DF1 /* isPalindromeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9253857023EA022E00493DF1 /* Build configuration list for PBXNativeTarget "isPalindromeTests" */;
+			buildPhases = (
+				9253856523EA022E00493DF1 /* Sources */,
+				9253856623EA022E00493DF1 /* Frameworks */,
+				9253856723EA022E00493DF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9253856F23EA022E00493DF1 /* PBXTargetDependency */,
+			);
+			name = isPalindromeTests;
+			productName = isPalindromeTests;
+			productReference = 9253856923EA022E00493DF1 /* isPalindromeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -125,6 +178,10 @@
 				TargetAttributes = {
 					9253854923E9E4FF00493DF1 = {
 						CreatedOnToolsVersion = 11.3;
+					};
+					9253856823EA022E00493DF1 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 9253854923E9E4FF00493DF1;
 					};
 				};
 			};
@@ -142,6 +199,7 @@
 			projectRoot = "";
 			targets = (
 				9253854923E9E4FF00493DF1 /* isPalindrome */,
+				9253856823EA022E00493DF1 /* isPalindromeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -153,6 +211,13 @@
 			files = (
 				9253855A23E9E50400493DF1 /* LaunchScreen.storyboard in Resources */,
 				9253855723E9E50400493DF1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9253856723EA022E00493DF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,12 +272,29 @@
 			files = (
 				9253854E23E9E4FF00493DF1 /* AppDelegate.swift in Sources */,
 				9253855023E9E4FF00493DF1 /* SceneDelegate.swift in Sources */,
+				9253857423EA06C100493DF1 /* ViewModelForViewController.swift in Sources */,
 				9253856223E9E6F300493DF1 /* PalindromeViewController.swift in Sources */,
 				9253856423E9F2BE00493DF1 /* PalindromeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9253856523EA022E00493DF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9253856C23EA022E00493DF1 /* isPalindromeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9253856F23EA022E00493DF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9253854923E9E4FF00493DF1 /* isPalindrome */;
+			targetProxy = 9253856E23EA022E00493DF1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9253855823E9E50400493DF1 /* LaunchScreen.storyboard */ = {
@@ -376,6 +458,44 @@
 			};
 			name = Release;
 		};
+		9253857123EA022E00493DF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = isPalindromeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dawid.ramone.isPalindromeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/isPalindrome.app/isPalindrome";
+			};
+			name = Debug;
+		};
+		9253857223EA022E00493DF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = isPalindromeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dawid.ramone.isPalindromeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/isPalindrome.app/isPalindrome";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -393,6 +513,15 @@
 			buildConfigurations = (
 				9253855F23E9E50400493DF1 /* Debug */,
 				9253856023E9E50400493DF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9253857023EA022E00493DF1 /* Build configuration list for PBXNativeTarget "isPalindromeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9253857123EA022E00493DF1 /* Debug */,
+				9253857223EA022E00493DF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

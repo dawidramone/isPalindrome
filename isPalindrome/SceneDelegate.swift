@@ -17,7 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         self.window?.windowScene = windowScene
-        let palindromeVC = PalindromeViewController()
+        let palindromeVM = PalindromeViewModel()
+        let palindromeVC = PalindromeViewController(viewModel: palindromeVM)
         self.window?.rootViewController = palindromeVC
         self.window?.makeKeyAndVisible()
     }

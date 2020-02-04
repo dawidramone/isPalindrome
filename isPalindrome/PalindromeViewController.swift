@@ -49,8 +49,17 @@ class PalindromeViewController: UIViewController {
         return label
     }()
 
-    private let viewModel = PalindromeViewModel()
+    private let viewModel: ViewModelForViewController
 
+    init(viewModel: ViewModelForViewController) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         self.view.backgroundColor = .white
         addSubviews()
@@ -76,6 +85,13 @@ class PalindromeViewController: UIViewController {
                 self.answerLabel.text = ""
             })
             .disposed(by: disposeBag)
+
+        palindromeTextField.rx.text.asObservable()
+            .map { $0?.isEmpty ?? true }
+            .map { !$0 }
+            .bind(to: checkButton.rx.isEnabled)
+            .disposed(by: disposeBag)
+
     }
 
     private func addSubviews() {

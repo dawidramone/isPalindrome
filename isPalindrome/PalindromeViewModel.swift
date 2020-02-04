@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PalindromeViewModel {
+class PalindromeViewModel: ViewModelForViewController {
 
     init() {}
 
