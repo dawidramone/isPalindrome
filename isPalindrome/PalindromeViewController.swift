@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PalindromeViewController.swift
 //  isPalindrome
 //
 //  Created by Dawid Ramone on 04/02/2020.
@@ -8,13 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class PalindromeViewController: UIViewController {
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = .red
     }
-
-
 }
-
