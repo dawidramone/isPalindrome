@@ -12,6 +12,7 @@ import RxSwift
 import RxCocoa
 
 class PalindromeViewController: UIViewController {
+    private let disposeBag = DisposeBag()
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Czy jest palindromem"
@@ -45,10 +46,29 @@ class PalindromeViewController: UIViewController {
         return label
     }()
 
+    private let palindromeViewModel = PalindromeViewModel()
+
     override func viewDidLoad() {
         self.view.backgroundColor = .white
         addSubviews()
         createConstraints()
+        bind()
+    }
+
+    private func bind() {
+        checkButton.rx.tap
+            .asDriver()
+            .withLatestFrom(palindromeTextFiled.rx.text.asDriver())
+            .map { self.palindromeViewModel.isPalindrome(input: $0) }
+            .drive(onNext: { (isPalindrome) in
+                self.answerLabel.text = isPalindrome
+                ? "Jest Palidromem!"
+                : "Nie jest Palidromem!"
+    
+                self.palindromeTextFiled.text = ""
+            })
+            .disposed(by: disposeBag)
+
     }
 
     private func addSubviews() {
