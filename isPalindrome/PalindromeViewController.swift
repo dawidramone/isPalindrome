@@ -11,7 +11,7 @@ import PureLayout
 import RxSwift
 import RxCocoa
 
-class PalindromeViewController: UIViewController, UITextFieldDelegate {
+class PalindromeViewController: UIViewController {
     private let disposeBag = DisposeBag()
 
     private let titleLabel: UILabel = {
@@ -53,7 +53,6 @@ class PalindromeViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         self.view.backgroundColor = .white
-        palindromeTextField.delegate = self
         addSubviews()
         createConstraints()
         bind()
